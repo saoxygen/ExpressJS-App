@@ -8,11 +8,14 @@ router.get("/", (req, res) => {
 });
 
 router.get("/new", (req, res) => {
-    res.send("New user form")
+    // res.send("New user form");
+    res.render("users/new", {firstName: "Kopano"})
 });
 
 router.post("/", (req, res) => {
-    res.send("Create user")
+    // res.send("Create user");
+    console.log(req.body.firstName);
+    res.send("Hi");
 })
 
 // url checks each route, make sure static routes come before dynamic routes such as /:id because /new will get mistaken as an id

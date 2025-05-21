@@ -3,6 +3,7 @@ const express = require("express"); // require the library we installed
 const app = express(); // call express function
 
 app.use(express.static("public")); // render static files from the public folder //can be used to access subfolders and files as well
+app.use(express.urlencoded({extended: true})); // middleware that allows use to access form info/the body of the response
 
 app.set("view engine", "ejs"); //set up view engine to pass info to html file and to load html from the server
 
