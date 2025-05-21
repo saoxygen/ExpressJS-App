@@ -4,7 +4,7 @@ const router = express.Router();
 router.use(logger); //middleware function I created
 
 router.get("/", (req, res) => {
-    res.send("User list")
+    res.send("User list " + req.query.name); // access name property in the query url method http://localhost:3000/users?name=Kyle
 });
 
 router.get("/new", (req, res) => {
