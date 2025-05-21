@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+router.use(logger); //middleware function I created
+
 router.get("/", (req, res) => {
     res.send("User list")
 });
@@ -32,4 +34,10 @@ router
 .delete((req, res) => {
     res.send(`Update info related to user: ${req.params.id}`)
 })
+
+function logger(req, res, next){
+    console.log(req.originalUrl)
+    next();
+}
+
 module.exports = router
