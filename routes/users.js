@@ -12,10 +12,26 @@ router.get("/new", (req, res) => {
     res.render("users/new", {firstName: "Kopano"})
 });
 
-router.post("/", (req, res) => {
+router.post("/", (req, res) => { // post called made from the new.ejs form
     // res.send("Create user");
-    console.log(req.body.firstName);
-    res.send("Hi");
+    // console.log(req.body.firstName);
+    // res.send("Hi");
+
+    const isValid = true;
+
+    if(isValid){
+
+        users.push({name: req.body.firstName}); // add new user to the array we have below
+
+        res.redirect(`/users/${users.length - 1}`); // redirect is used to redirct the user to different parts of the application
+
+    } else {
+
+        console.log("Error");
+        res.render("users/new", {firstName: req.body.firstName})
+
+    }
+
 })
 
 // url checks each route, make sure static routes come before dynamic routes such as /:id because /new will get mistaken as an id
