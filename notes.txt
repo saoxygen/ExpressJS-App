@@ -1,0 +1,30 @@
+# Step-by-Step Notes
+
+1. Opened the terminal and navigated to the project directory:
+    cd "c:/Portfolio/Express Project"
+
+2. Initialized a new Node.js project:
+    npm init -y
+
+3. Installed Express.js:
+    npm install express
+
+4. Auto restarts server 
+npm i --save-dev nodemon
+
+5. set up package.json file
+
+  "scripts": {
+    "devStart": "nodemon server.js"
+  }
+
+6. Created the main application file:
+    touch server.js
+
+7. Ran the application: (To run the server.js file)
+    npm run devStart
+
+8. npm i ejs (view engine similar to html)
+
+9. git init
+Initialized empty Git repository in C:/Portolio/Express Project/.git/

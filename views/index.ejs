@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express app</title>
+</head>
+<body>
+    <!-- info inbetween the % sign is ran on the server side or comes from the server -->
+     <!-- use 'locals' object to prevent undefined variables from crashing the front end -->
+    <h1>First Express app <%= locals.text || "Defualt" %></h1>
+</body>
+</html>
